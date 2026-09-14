@@ -1,0 +1,60 @@
+/* =========================================================
+   Comeet apply-form — Gambit styling (loaded via css-url)
+   Selectors verified against the live Spark Hire form.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #E74456;
+  --label:   #171718;
+  --border:  #E5E5ED;
+  --placeholder: #9C9DA8;
+}
+
+/* ---- DM Sans everywhere ---- */
+body, .control-label, .form-control, input, textarea, select,
+button, a, label, p, span, div {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+}
+
+/* ---- Labels (left column) ---- */
+.control-label {
+  color: var(--label) !important;
+  font-size: 0.875rem !important;
+  line-height: 1rem !important;
+  font-weight: 600 !important;
+}
+
+/* ---- Inputs / textareas ---- */
+.form-control {
+  border: 1px solid var(--border) !important;
+  border-radius: 0.5rem !important;
+  box-shadow: none !important;
+  color: #171718 !important;
+}
+.form-control::placeholder { color: var(--placeholder) !important; opacity: 1 !important; }
+.form-control:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(231, 68, 86, 0.15) !important;
+}
+
+/* ---- Attach links (they are label.clickableLink, not <a>) ---- */
+.clickableLink { color: var(--primary) !important; }
+
+/* ---- Submit button (Comeet's real classes) ---- */
+button.applyButton.brandColoredButton,
+.brandColoredButton {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 9999px !important;      /* fully rounded */
+  padding: 0.625rem 1rem !important;      /* vertical / horizontal */
+  font-size: 1.125rem !important;
+  line-height: 1.25rem !important;
+  font-weight: 600 !important;
+  text-transform: none !important;        /* was UPPERCASE */
+}
+
+/* ---- Spacing between field rows ---- */
+.form-group { margin-bottom: 1.25rem !important; }
