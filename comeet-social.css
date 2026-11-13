@@ -1,0 +1,42 @@
+/* =========================================================
+   Comeet social widget — Gambit styling (careers listing page)
+   Loaded via data-css-url on the embed.
+   Hides share buttons, styles the employee referral link,
+   and reuses apply-form styling for the referral popup.
+   ========================================================= */
+
+/* @import rules must stay at the very top */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/ducanh-arch/gambit-assets@main/comeet-form.css");
+
+/* ---- DM Sans everywhere ---- */
+body, a, label, span, div {
+  font-family: "DM Sans", system-ui, sans-serif !important;
+}
+
+/* ---- Blend iframe into the page ---- */
+html,
+body {
+  margin: 0 !important;
+  background: transparent !important;
+  text-align: center !important;
+}
+
+/* ---- Hide share buttons and title ---- */
+.shareButton,
+.shareTitle {
+  display: none !important;
+}
+
+/* ---- Referral link: the only visible link once share buttons are hidden ---- */
+a:not(.shareButton) {
+  color: #E74456 !important;
+  font-size: 1rem !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.2em !important;
+  transition: opacity 0.2s ease;
+}
+
+a:not(.shareButton):hover {
+  opacity: 0.7;
+}
